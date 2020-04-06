@@ -1,0 +1,410 @@
+:root 
+{
+	--color-palette1-red: #FF5468; /*rose foncé sf*/
+	--color-palette1-orange: #FABE4D; /*Slow Down*/
+	--color-palette1-green: #4DFA90; /*Hypermode*/
+	--color-palette2-red: #E60000; /*Electric Red*/
+	--color-palette2-orange: #FF7800; /*Safety Orange*/
+	--color-palette2-green: #4CBB17; /*Kelly Green*/
+	--color-default-yellow: #FEDF00;
+	--color-default-red: var(--color-palette2-red);
+	--color-default-orange: var(--color-palette2-orange);
+	--color-default-green: var(--color-palette2-green);
+	--color-default-grey: #e8e8e8;
+	--f7-tabbar-link-active-color: rgba(255,255,255,1);
+	--f7-tabbar-link-inactive-color: rgba(255,255,255,.54);
+	/*--f7-theme-color: var(--color-aerocom);*/
+	--f7-button-text-transform: none; /*Disable uppercase for Android buttons.*/
+}
+
+/*#buildingImg
+{
+	max-width: 100%;
+    max-height: 200px;
+    float: right;
+}*/
+
+#home-block
+{
+	height: -webkit-fill-available;
+	background-image: url(../images/building.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#my-bottom-toolbar
+{
+	background: var(--color-aerocom);	
+}
+
+.button
+{
+	text-overflow: unset;
+}
+
+.button-icon
+{
+	font-size: 15px;
+    vertical-align: middle;
+}
+
+.card-expandable 
+{
+    height: 100px;
+}
+
+.map,
+.center 
+{
+  /*display: block;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 50%;*/
+}
+
+.chip
+{
+  margin-right: 5px;
+}
+
+.text-highlight
+{
+    font-size: 14pt;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-aerocom);
+    margin-bottom: 10px;
+}
+
+#profilePicture
+{
+	border-radius: 50%;
+}
+
+.slot-not-applied
+{
+	/*background: var(--color-default-grey);*/
+	background: repeating-linear-gradient(135deg, var(--color-default-grey), var(--color-default-grey) 5px, #fff 5px, #fff 10px );
+    /*border: solid 0.5px #e60000;*/
+}
+
+.slot-booked
+{
+	background: var(--color-default-red);
+	/*background: repeating-linear-gradient(45deg, var(--color-default-red), var(--color-default-red) 5px, #fff 5px, #fff 10px );*/
+    /*border: solid 0.5px #e60000;*/
+}
+
+.slot-available
+{
+	background: var(--color-default-green);
+	/*background: repeating-linear-gradient(45deg, var(--color-default-red), var(--color-default-red) 5px, #fff 5px, #fff 10px );*/
+    /*border: solid 0.5px #e60000;*/
+}
+
+.data-table td.label-cell, 
+.data-table th.label-cell
+{
+	border: solid 0.5px #e0e0e0;
+}
+
+/* Make a round card feeling for whole app */
+body
+{
+	border-radius: 7px;
+	background-color: black;
+}
+
+/*@media (min-width: 499px) and (orientation:landscape) 
+{
+  body
+  {
+    max-width: 700px;
+    max-height: 700px;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+}*/
+
+.navbar
+/*.navbar a*/
+{
+	/*background-color: var(--color-aerocom);
+	color: white;*/
+  background-image: var(--f7-navbar-bg-image,var(--f7-bars-bg-image));
+  background-color: var(--f7-navbar-bg-color,var(--f7-bars-bg-color,var(--f7-theme-color)));
+}
+
+body, p
+{
+  /*font-family: 'Varela Round', sans-serif;*/
+  /*font-family: 'Circular Std Book';*/
+  /*font-family: 'Rubik', serif;*/
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  /*font-family: 'Varela Round', sans-serif;*/
+  /*font-family: 'Circular Std Book';*/
+  /*font-family: 'Crete Round', serif;*/
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.login-screen-content
+{
+  /*background-image: url(../images/bg_temp.png);*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-color: #398fc1; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #5859b9, #00f3d0); /* Standard syntax (must be last) */
+}
+
+.default-page-content
+{
+  /*background-image: url(../images/bg_temp.png);*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-color: #398fc1; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #5859b9, #00f3d0); /* Standard syntax (must be last) */
+}
+
+.alert-danger 
+{
+    color: white;
+    background-color: var(--color-default-red);
+}
+
+.alert-success 
+{
+    color: white;
+    background-color: var(--color-default-green);
+}
+
+.alert-info 
+{
+    color: white;
+    background-color: var(--color-aerocom);
+}
+
+.alert-grey 
+{
+    /*color: white;*/
+    /*background-color: var(--color-default-grey);*/
+    background: repeating-linear-gradient(135deg, 
+    	var(--color-default-grey), 
+    	var(--color-default-grey) 5px, 
+    	#fff 5px, #fff 10px );
+}
+.alert 
+{
+    padding: 15px;
+    /*margin-bottom: 20px;*/
+    border: 1px solid transparent;
+    border-radius: 4px;
+    /*width: 100%;*/
+}
+
+.alert-icon
+{
+	padding-right: 5px;
+	/*font-size: inherit;*/
+}
+
+.req
+{
+	color: var(--color-default-red);
+}
+
+.color-stripes
+{
+	background: repeating-linear-gradient(
+	  135deg,
+	  var(--color-palette1-red), 
+	  var(--color-palette1-red) 5px, 
+	  var(--color-aerocom) 5px, 
+	  var(--color-aerocom) 10px
+	);
+}
+
+#button-downloaded-md:disabled,
+#button-downloaded-md[disabled],
+#buttonAddBooking:disabled,
+#buttonAddBooking[disabled]
+{
+  border: 1px solid #999999 !important;
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
+/*.calendar-day.calendar-day-selected .calendar-day-number 
+{
+    color: var(--f7-calendar-selected-text-color);
+    background-color: var(--f7-calendar-selected-bg-color,var(--f7-theme-color)) !important;
+}
+
+.calendar-day.calendar-day-has-events .calendar-day-number 
+{
+    color: white;
+    background-color: var(--color-default-green);
+}*/
+
+/* Show full sentence on FAQs */
+.list .item-title
+{
+	white-space: normal;
+}
+
+.overlay 
+{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+/* Split the screen in half */
+.overlay-split 
+{
+  height: 50%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  /*overflow-x: hidden;*/
+  /*padding-left: 20px;*/
+  color: white;
+}
+
+/* Control the top side */
+.overlay-split-top 
+{
+  top: 0;
+}
+
+/* Control the bottom side */
+.overlay-split-bottom
+{
+  bottom: 0;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered 
+{
+  /*position: absolute;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered-v
+{
+  display:block;
+  margin:auto;
+}
+
+/* Style the image inside the centered container, if needed */
+/*.centered img 
+{
+  width: 150px;
+  border-radius: 50%;
+}*/
+
+.screen-white
+{
+  margin: 10px; 
+  background: rgba(255, 255, 255, 0.5); 
+  /*left: 25%; 
+  transform: translate(-50%, 0%);*/
+}
+
+.block-title
+{
+  color: var(--color-aerocom);
+}
+
+.size-22 { font-size: 22px }
+.size-25 { font-size: 25px }
+.size-29 { font-size: 29px }
+.size-50 { font-size: 50px }
+
+.block-title 
+{
+  white-space: normal;
+}
+
+.thumbnail 
+{
+    width:50px;
+    height:50px;
+    position:relative;
+}
+
+.qr-thumbnail
+{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.thumbnail img 
+{
+    max-width:100%;
+    max-height:100%;
+}
+
+.thumbnail-close 
+{
+    display:block;
+    float:right;
+    width:30px;
+    height:29px;
+    background:url(../images/close.png) no-repeat center center;
+}
+
+.profile-photo
+{
+  background: white;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+.button-action
+{
+  width: 33px !important;
+  height: 33px;
+  padding: 1px;
+}
+
+.fab[class*="-bottom"] 
+{
+  bottom: calc(var(--f7-fab-margin) + var(--f7-safe-area-bottom) + var(--f7-tabbar-labels-height));
+}
+
+.list .item-text 
+{
+  max-height: unset;
+}
+
+.company-link
+{
+  background: var(--color-aerocom);
+}
+
+.list .item-link.company-link .item-inner:before
+{
+  color: white;
+}
